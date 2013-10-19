@@ -183,12 +183,12 @@ module Github
     #
     # = Examples
     #  github = Github.new
-    #  github.gists.fork 'gist-id'
+    #  github.gists.forks 'gist-id'
     #
-    def fork(*args)
+    def forks(*args)
       arguments(args, :required => [:gist_id])
 
-      post_request("/gists/#{gist_id}/fork", arguments.params)
+      post_request("/gists/#{gist_id}/forks", arguments.params)
     end
 
     # Delete a gist
